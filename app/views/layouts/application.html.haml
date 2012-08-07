@@ -2,7 +2,7 @@
 %html
   %head
     %title Likes Work!
-    %link{:rel=>"shortcut icon",:href=>"../images/up.png",:type=>"image/x-icon"}
+    %link{:rel=>"shortcut icon",:href=>"../images/up.png  ",:type=>"image/x-icon"}
     = javascript_include_tag "application"
     = javascript_include_tag "jquery.min"
     = javascript_include_tag "validation"
@@ -11,6 +11,15 @@
     = stylesheet_link_tag "applestyle_search"
     = csrf_meta_tag
   %body
+  #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
   .container{:align=>'center',:position=>"absolute",:valign=>"center"}
     .row
       .span9
@@ -25,6 +34,8 @@
           #vk_like
           :javascript
             VK.Widgets.Like("vk_like", {type: "button"});
+        %div{:style=>"width:200px;margin-top:20px;"}
+          .fb-like-box{"data-header" => "true", "data-height" => "300", "data-href" => "http://likeswork.com", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "180"}
   #content{:style=>"margin-top:150px;"}
   .top
     .right{:style=>"margin-right:10px;"}
