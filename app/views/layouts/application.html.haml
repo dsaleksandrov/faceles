@@ -2,7 +2,7 @@
 %html
   %head
     %title Likes Work!
-    %link{:rel=>"shortcut icon",:href=>"../images/up.ico",:type=>"image/x-icon"}
+    %link{:rel=>"shortcut icon",:href=>"../images/up.png",:type=>"image/x-icon"}
     = javascript_include_tag "application"
     = javascript_include_tag "jquery.min"
     = javascript_include_tag "validation"
@@ -15,7 +15,7 @@
     .row
       .span9
         = yield
-      .span3{:style =>"",:valing=>"top"} 
+      .span3{:style =>"width:200px;",:valing=>"top"} 
         Каждый студент желает знать Likes Work!
         %div{:style=>"margin-top:20px;"}
           %script{:src => "http://userapi.com/js/api/openapi.js?52", :type => "text/javascript"}
