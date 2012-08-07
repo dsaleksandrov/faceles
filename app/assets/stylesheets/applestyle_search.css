@@ -37,15 +37,18 @@ body{background-color: #EEEEEE}
     border-color: #e77776;
 }
 
-#footer {
-    min-width: 1000px;
-    margin: -100px auto 0;
-    height: 100px;
-    position: relative;
-}
- 
-#copy {
-padding-right:10px;
-padding-top:80px;
-float:right;
-}
+ul{text-align:right;margin:1em 0;padding:0}
+ul li{display:inline;white-space:nowrap}
+ul li.prev{float:left}
+#content>ul{display:table;width:90%}
+#content>ul li{display:table-cell}
+#content>ul li.prev{float:none;text-align:left}
+#content>ul li.next{text-align:right}
+
+div.top{text-align:right;margin:1em 0;padding:0}
+div.top div{display:inline;white-space:nowrap}
+div.top div.left{float:left}
+#content>div.top{display:table;width:90%}
+#content>div.top div{display:table-cell}
+#content>div.top div.left{float:none;text-align:left}
+#content>div.top div.right{text-align:right}
