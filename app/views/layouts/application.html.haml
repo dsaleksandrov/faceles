@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title Likes Work!
+    = javascript_include_tag "application"
+    = javascript_include_tag "jquery.min"
+    = javascript_include_tag "validation"
+    = javascript_include_tag "bootstrap", :media=>"all"
+    = stylesheet_link_tag "bootstrap"
+    = stylesheet_link_tag "applestyle_search"
+    = csrf_meta_tag
+  %body
+  .container{:align=>'center',:position=>"absolute",:valign=>"center"}
+    .row
+      .span9
+        = yield
+      .span3{:style =>"",:valing=>"top"} 
+        Каждый студент желает знать Likes Work!
+
+
+
+
+

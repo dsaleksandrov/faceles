@@ -1,0 +1,24 @@
+= form_tag likes_path, :method => :get, :id => "likes_form", :remote => true do
+  %table{:id=>"texttable"}
+    %tr
+      %td
+        %p{:style=>"font-family: 'Palatino Linotype','Book Antiqua',Palatino,serif;font-size:75px;margin-right:20px;"}Likes Work!
+      %td 
+        %img{:src=>"../images/up.jpeg",:height=>"100",:width=>"100"}
+
+  %div{:style=>"width:370px;margin-left:-60px;margin-top:40px;"}
+    Если вы хотите сразу узнать об открытии проекта или помочь в развитии проекта, оставьте Ваш email:)
+
+  %table{:id=>"addemailtable"}
+    %tr
+      %td{:style=>"margin-right:50px"}
+        = text_field_tag :email, params[:email]
+      %td
+        %a{:id => "addbutton", :class=>"btn btn-primary"} Добавить email
+  
+  %div{:id => 'likes'}
+    = render 'likes'
+    
+
+
+      
