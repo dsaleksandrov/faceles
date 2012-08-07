@@ -17,16 +17,17 @@
         = yield
       .span3{:style =>"",:valing=>"top"} 
         Каждый студент желает знать Likes Work!
-        / Put this script tag to the <head> of your page
-        %script{:src => "http://userapi.com/js/api/openapi.js?52", :type => "text/javascript"}
-        :javascript
-          VK.init({apiId: 3067813, onlyWidgets: true});
-        / Put this div tag to the place, where the Like block will be
-        #vk_like
-        :javascript
-          VK.Widgets.Like("vk_like", {type: "button"});
-
-
-
+        %div{:style=>"margin-top:20px;"}
+          %script{:src => "http://userapi.com/js/api/openapi.js?52", :type => "text/javascript"}
+          :javascript
+            VK.init({apiId: 3067813, onlyWidgets: true});
+          / Put this div tag to the place, where the Like block will be
+          #vk_like
+          :javascript
+            VK.Widgets.Like("vk_like", {type: "button"});
+  %div{:style=>"margin-top:150px;valign:right"}
+    %a{:href=>"http://vk.com/withmyself"}
+      (C) Denisa
+  
 
 

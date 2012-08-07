@@ -36,3 +36,16 @@ body{background-color: #EEEEEE}
     background: #f8dbdb;
     border-color: #e77776;
 }
+
+#footer {
+    min-width: 1000px;
+    margin: -100px auto 0;
+    height: 100px;
+    position: relative;
+}
+ 
+#copy {
+padding-right:10px;
+padding-top:80px;
+float:right;
+}
