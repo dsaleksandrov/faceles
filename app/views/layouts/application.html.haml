@@ -2,6 +2,7 @@
 %html
   %head
     %title Likes Work!
+    %link{:rel=>"shortcut icon",:href=>"../images/up.ico",:type=>"image/x-icon"}
     = javascript_include_tag "application"
     = javascript_include_tag "jquery.min"
     = javascript_include_tag "validation"
@@ -16,6 +17,14 @@
         = yield
       .span3{:style =>"",:valing=>"top"} 
         Каждый студент желает знать Likes Work!
+        / Put this script tag to the <head> of your page
+        %script{:src => "http://userapi.com/js/api/openapi.js?52", :type => "text/javascript"}
+        :javascript
+          VK.init({apiId: 3067813, onlyWidgets: true});
+        / Put this div tag to the place, where the Like block will be
+        #vk_like
+        :javascript
+          VK.Widgets.Like("vk_like", {type: "button"});
 
 
 
