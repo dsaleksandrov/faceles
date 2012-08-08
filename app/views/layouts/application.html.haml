@@ -11,15 +11,30 @@
     = stylesheet_link_tag "applestyle_search"
     = csrf_meta_tag
   %body
-  #fb-root
-    :javascript
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+  / Yandex.Metrika counter
+  :javascript
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter16317856 = new Ya.Metrika({id:16317856, enableAll: true});
+            } catch(e) { }
+        });
+        
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+    
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  %noscript
+    %div
+      %img{:alt => "", :src => "//mc.yandex.ru/watch/16317856", :style => "position:absolute; left:-9999px;"}/
+  / /Yandex.Metrika counter
   .container{:align=>'center',:position=>"absolute",:valign=>"center"}
     .row
       .span9
