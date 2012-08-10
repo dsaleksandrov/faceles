@@ -1,9 +1,9 @@
 .text {
-    background: url(../images/up.jpeg) no-repeat 10px 6px #fcfcfc;
+    background: url(../images/up1.png) no-repeat 10px 6px #fcfcfc;
     }
  .container{ margin-top: 15%;margin-left: 23%}
 
-body{background-color: #EEEEEE}
+body{background: url(../images/pattern4.png) repeat scroll 0 0 #F4F4F4}
 
  #email {
     border: 1px solid #d1d1d1;
